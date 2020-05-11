@@ -1,0 +1,26 @@
+// tag::manpage[]
+= code2asciidoc(1)
+Yorick Terweijden
+{version}
+:doctype: manpage
+:manmanual: code2asciidoc
+:mansource: code2asciidoc
+:man-linkstyle: pass:[blue R < >]
+
+== Name
+code2asciidoc - Generate AsciiDoc documentation based on Go test files.
+
+== Synopsis
+
+*code2asciidoc* [--source FILE]
+
+*code2asciidoc* [--source FILE --out FILE]
+
+*code2asciidoc* [--source FILE --out FILE --run]
+
+== Options
+include::../cmd/code2asciidoc/main.go[tag=options,indent=0]
+
+// end::manpage[]
+
+include::../docs/code2asciidoc.adoc[]

@@ -1,0 +1,7 @@
+= code2asciidoc
+
+include::code2asciidoc.adoc[]
+
+== Usage
+
+include::../cmd/code2asciidoc/main.go[tag=options,indent=0]

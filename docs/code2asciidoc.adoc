@@ -1,0 +1,8 @@
+== About
+
+code2asciidoc solves the problem where code samples for API's are not properly
+tested in most documentation.
+It leverages the Go testing framework by writing the sample in there, using
+the AsciiDoc tagging system and this tool joins it all together.
+
+When using gRPC best use it in conjunction with https://github.com/productsupcom/proto2asciidoc[proto2asciidoc]
