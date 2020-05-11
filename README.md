@@ -30,8 +30,11 @@ Do not set a document header and ToC
 
 ## Output
 
-You can view the output of the example below under
-[Examples Documentation](https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.adoc)
+You can view the output of the example below in Asciidoc here:
+[Examples Documentation in AsciiDoc](https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.adoc)
+
+Or as a Markdown version (generated from Asciidoc through Pandoc output) here:
+[Examples Documentation in Markdown](https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.md)
 
 ## Example
 

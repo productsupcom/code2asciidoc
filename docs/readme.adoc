@@ -7,8 +7,11 @@ include::code2asciidoc.adoc[]
 include::../cmd/code2asciidoc/main.go[tag=options,indent=0]
 
 == Output
-You can view the output of the example below under 
-link:https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.adoc[Examples Documentation]
+You can view the output of the example below in Asciidoc here:
+link:https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.adoc[Examples Documentation in AsciiDoc]
+
+Or as a Markdown version (generated from Asciidoc through Pandoc output) here:
+link:https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.md[Examples Documentation in Markdown]
 
 == Example
 The following file shows a complete example, it's provided inside the `examples/`

@@ -10,6 +10,7 @@ man:
 
 markdown:
 	@asciidoctor docs/readme.adoc -b docbook -a leveloffset=+1 -o - | pandoc  --atx-headers --wrap=preserve -t gfm -f docbook - > README.md
+	@asciidoctor docs/generated/examples.adoc -b docbook -a leveloffset=+1 -o - | pandoc  --atx-headers --wrap=preserve -t gfm -f docbook - > docs/generated/examples.md
 
 proto:
 	@./protoc/bin/protoc -I=examples/ \
