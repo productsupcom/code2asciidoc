@@ -28,6 +28,10 @@ the source Go file minus the \_test with a .apisamples extension
 **--no-header**
 Do not set a document header and ToC
 
+## Output
+
+You can view the output of the example below under [Examples Documentation](generated/examples.adoc)
+
 ## Example
 
 The following file shows a complete example, it’s provided inside the `examples/`

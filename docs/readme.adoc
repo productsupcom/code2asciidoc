@@ -6,6 +6,9 @@ include::code2asciidoc.adoc[]
 
 include::../cmd/code2asciidoc/main.go[tag=options,indent=0]
 
+== Output
+You can view the output of the example below under link:generated/examples.adoc[Examples Documentation]
+
 == Example
 The following file shows a complete example, it's provided inside the `examples/`
 directory including a Protobuf definition plus the compiled output.
