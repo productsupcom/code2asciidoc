@@ -5,3 +5,30 @@ include::code2asciidoc.adoc[]
 == Usage
 
 include::../cmd/code2asciidoc/main.go[tag=options,indent=0]
+
+== Example
+The following file shows a complete example, it's provided inside the `examples/`
+directory including a Protobuf definition plus the compiled output.
+
+The output can be seen at `docs/generated/examples.adoc`.
+
+.Test Example
+[source,go]
+----
+include::../examples/examples_test.go[]
+----
+
+You can produce the same output by doing:
+
+[source,shell]
+----
+code2asciidoc --source ${PWD}/examples/examples_test.go --out docs/generated/examples.adoc --run --f
+----
+
+[Note]
+====
+The `${PWD}` (for Makefile `${CURDIR}`) is very important, it has to be an absolute path for the source.
+====
+
+The `--run` causes the tool to call the Go test-suite which will produce the
+output files.

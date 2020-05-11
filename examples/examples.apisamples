@@ -1,0 +1,14 @@
+
+// tag::ExampleSample1[]
+{
+  "someString": "Foo",
+  "someInt": 1
+}
+// end::ExampleSample1[]
+
+// tag::ExampleSample1[]
+{
+  "someString": "Foo",
+  "someInt": 1
+}
+// end::ExampleSample1[]

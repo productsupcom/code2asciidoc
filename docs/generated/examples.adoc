@@ -1,0 +1,43 @@
+= examples 
+:toc: left
+
+// THIS FILE IS GENERATED. DO NOT EDIT.
+// tag::ExampleSample1[]
+<<<
+== Example Hello World
+A simple demonstration to show the syntax of code2asciidoc.
+You can use any form of asciidoc inside the comments, as it will be
+properly parsed by AsciiDoc later.
+
+What is important is that the function of the test method is the same
+as the Tags set below.
+Also the name for the CreateJsonSample must match (the name of the current)
+package!
+
+Be sure to place it inside a filename you can later ingest into your
+API docs. Recommended is to keep it per gRPC Service.
+
+[NOTE.small]
+====
+We can even use blocks in here if we want.
+====
+
+[#example hello world_examplesample1_go]
+.Go Example Hello World
+[source,go]
+----
+include::/home/yt/code2asciidoc/examples/examples_test.go[tag=ExampleSample1,indent=0]
+----
+
+[#example hello world_examplesample1_json]
+.JSON Example Hello World
+[source,json]
+----
+include::/home/yt/code2asciidoc/examples/examples.apisamples[tag=ExampleSample1]
+----
+
+=== Response
+And in some cases you also want to have docs behind the samples to make
+data more clear.
+
+// end::ExampleSample1[]
