@@ -30,7 +30,8 @@ Do not set a document header and ToC
 
 ## Output
 
-You can view the output of the example below under [Examples Documentation](generated/examples.adoc)
+You can view the output of the example below under
+[Examples Documentation](https://github.com/productsupcom/code2asciidoc/blob/master/docs/generated/examples.adoc)
 
 ## Example
 
