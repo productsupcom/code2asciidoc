@@ -51,7 +51,7 @@ package examples
 import (
     "testing"
 
-    "github.com/productsupcom/code2asciidoc/cmd/code2asciidoc/sample"
+    "github.com/productsupcom/code2asciidoc/sample"
 )
 
 func Test_ExampleSample1(t *testing.T) {
