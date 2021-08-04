@@ -8,23 +8,24 @@ import (
 	"github.com/golang/protobuf/proto"
 )
 
+var Marshaler = gateway.JSONPb{}
+
 // ProtoToJson returns the object as the Dispatcher Server does through gRPC as a Gateway
 // the v proto.Message is critical, I have not found out yet why but that's some sugar that
 // somehow changes the way the marshaler expects the message to be, else the output is different
 func protoToJson(v proto.Message, pretty bool) ([]byte, error) {
-	marshaler := gateway.JSONPb{}
 	if pretty {
-		marshaler.Indent = "  "
+		Marshaler.Indent = "  "
 	}
-	marshaler.EmitDefaults = false
-	out, err := marshaler.Marshal(v)
+	Marshaler.EmitDefaults = false
+	out, err := Marshaler.Marshal(v)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func writeToSample(b []byte, name string, f *os.File) error {
+func WriteToSample(b []byte, name string, f *os.File) error {
 	if _, err := f.WriteString(fmt.Sprintf("\n// tag::%s[]\n", name)); err != nil {
 		return err
 	}
@@ -37,13 +38,13 @@ func writeToSample(b []byte, name string, f *os.File) error {
 	return nil
 }
 
-func createSample(v proto.Message, name string, f *os.File, pretty bool) error {
+func CreateSample(v proto.Message, name string, f *os.File, pretty bool) error {
 	out, err := protoToJson(v, pretty)
 	if err != nil {
 		return err
 	}
 
-	err = writeToSample(out, name, f)
+	err = WriteToSample(out, name, f)
 	if err != nil {
 		return err
 	}
@@ -52,11 +53,11 @@ func createSample(v proto.Message, name string, f *os.File, pretty bool) error {
 }
 
 func CreateJsonSample(v proto.Message, name string, f *os.File) error {
-	return createSample(v, name, f, true)
+	return CreateSample(v, name, f, true)
 }
 
 func CreateJsonSampleRaw(v proto.Message, name string, f *os.File) error {
-	return createSample(v, name, f, false)
+	return CreateSample(v, name, f, false)
 }
 
 func Setup(name string) (*os.File, error) {
